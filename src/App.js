@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  import { Component } from 'react';
+  import './App.css';
+  import Backdrop from './components/NavHeader/Backdrop/Backdrop';
+  import Navbar from './components/NavHeader/Navbar/Navbar';
+  import SideDrawer from './components/NavHeader/SideDrawer/SideDrawer';
 
-export default App;
+  
+
+  class App extends Component {
+
+    state= {
+      SideDrawerOpen: false
+    };
+
+    drawerToggleClickHandler = () =>{
+      this.setState((prevState) =>{
+        return {SideDrawerOpen: !prevState.SideDrawerOpen};
+      });
+    };
+
+    backdropClickHandler = () => {
+      this.setState({SideDrawerOpen: false })
+    }
+
+
+    render (){
+      
+      let backdrop;
+
+      if (this.state.SideDrawerOpen){
+      
+        backdrop = <Backdrop click= {this.backdropClickHandler}/>
+      }
+
+
+    return (
+      <div style={{height: '100%'}}>
+
+      <Navbar drawerClickHandler={this.drawerToggleClickHandler}/>
+
+      <SideDrawer show={this.state.SideDrawerOpen}/>
+      {backdrop}
+      
+        <main style={{marginTop:'64px'}}>
+          <p>
+            HOME
+          </p>
+        </main>
+
+      </div>
+    );
+    }
+  }
+
+  export default App;
