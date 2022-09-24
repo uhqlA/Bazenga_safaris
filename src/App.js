@@ -1,56 +1,23 @@
+import React from 'react';
 
-  import { Component } from 'react';
-  import './App.css';
-  import Backdrop from './components/NavHeader/Backdrop/Backdrop';
-  import Navbar from './components/NavHeader/Navbar/Navbar';
-  import SideDrawer from './components/NavHeader/SideDrawer/SideDrawer';
+//Rendered components
+import Navbar from "./Navbar";
+import Carousel from "../src/components/Carousel/Carousel"
+import SocialMedia from './components/SocialMedia/SocialMedia';
 
-  
-
-  class App extends Component {
-
-    state= {
-      SideDrawerOpen: false
-    };
-
-    drawerToggleClickHandler = () =>{
-      this.setState((prevState) =>{
-        return {SideDrawerOpen: !prevState.SideDrawerOpen};
-      });
-    };
-
-    backdropClickHandler = () => {
-      this.setState({SideDrawerOpen: false })
-    }
-
-
-    render (){
+const App = () => {
+  return (
+    <div>
+      <Navbar />
       
-      let backdrop;
+      <Carousel />
+      <SocialMedia />
+    
+       
+       
 
-      if (this.state.SideDrawerOpen){
-      
-        backdrop = <Backdrop click= {this.backdropClickHandler}/>
-      }
+    </div>
+  )
+}
 
-
-    return (
-      <div style={{height: '100%'}}>
-
-      <Navbar drawerClickHandler={this.drawerToggleClickHandler}/>
-
-      <SideDrawer show={this.state.SideDrawerOpen}/>
-      {backdrop}
-      
-        <main style={{marginTop:'64px'}}>
-          <p>
-            HOME
-          </p>
-        </main>
-
-      </div>
-    );
-    }
-  }
-
-  export default App;
+export default App

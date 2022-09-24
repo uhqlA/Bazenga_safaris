@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//import SocialMedia from "../src/components/SocialMedia/SocialMedia"
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/* <SocialMedia /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

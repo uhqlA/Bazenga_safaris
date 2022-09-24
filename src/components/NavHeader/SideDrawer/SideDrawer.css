@@ -1,15 +1,15 @@
 .side-drawer {
     height: 100%;
-    background: white;
+    background: rgb(219, 189, 189);
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position: fixed;
-    top: 7%;
+    top: 9%;
     left: 0;
-    width: 40%;
+    width: 75%;
     max-width: 400px ;
     z-index: 200;
     transform: translate(-100%);
-    transition: transform 0.3s ease-out;
+    transition: transform 0.5s ease-out;
     cursor: pointer;
 }
 .side-drawer.open{
@@ -17,7 +17,7 @@
 }
 
 .side-drawer ul{
-    height: 100%;
+    height: 80%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -32,13 +32,22 @@
 .side-drawer a{ 
     color: #521751;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
 }
 
 .side-drawer a:hover,
 .side-drawer a:active{
-    color: #fa923f;
+    color: red;
 }
+
+.shop{
+    font-size: smaller;
+
+}
+
 
 @media (min-width: 769px){
     .side-drawer {

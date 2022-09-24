@@ -1,0 +1,99 @@
+.header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(247, 242, 242); 
+    z-index: 100;
+    box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+    
+  }
+  
+  .header_left {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .header_input {
+    display: flex;
+    align-items: center;
+    background-color: #eff2f5;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 999px;
+  }
+  
+  /* .header_left > img {
+    height: 40px;
+    border-radius: 10px;
+  }
+  
+  .header_input > input {
+    border: none;
+    background-color: transparent;
+    outline-width: 0;
+  } */
+  
+  .header_option--facebook{
+      color: blueviolet;
+  }
+  
+  .header_option--instagram{
+      color: #bc9239 ;
+  }
+  .header_option--linkedin{
+      color: #0072b1 ;
+  }
+  
+  .header_option--twitter{
+      color: #1DA1F2 ;
+  }
+  
+  .header_option--whatsaap{
+      color: #25D366 ;
+  }
+  
+  .header_option--youtube{
+      color: rgb(255, 0, 0) ;
+  }
+  
+  .header_middle {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .header_option:hover > .MuiSvgIcon-root {
+    color: blue;
+  }
+  
+  .header_option {
+    display: flex;
+    align-items: center;
+    padding: 0 17px;
+    cursor: pointer;
+    border-bottom: none;
+  }
+  
+  .header_info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header_info > a {
+    margin-left: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: navy;
+  }
+  
+  .header_right {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  
+@media (max-width: 768px){
+  .header{
+      display: none;
+  }
+}
