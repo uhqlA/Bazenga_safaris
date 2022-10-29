@@ -1,8 +1,8 @@
 import { Component } from "react";
 import "./App.css";
-import Backdrop from "./components/NavHeader/Backdrop/Backdrop";
-import Navbar from "./components/NavHeader/Navbar/Navbar";
-import SideDrawer from "./components/NavHeader/SideDrawer/SideDrawer";
+import Backdrop from "./Components/NavHeader/Backdrop/Backdrop";
+import Navbar from "./Components/NavHeader/Navbar/Navbar";
+import SideDrawer from "./Components/NavHeader/SideDrawer/SideDrawer";
 
 class Nav extends Component {
   state = {

@@ -1,11 +1,10 @@
 .side-drawer {
     height: 100%;
-    background: rgb(219, 189, 189);
-    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+    background: #281306;
+    /* box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5); */
     position: fixed;
-    top: 9%;
     left: 0;
-    width: 75%;
+    width: 60%;
     max-width: 400px ;
     z-index: 200;
     transform: translate(-100%);
@@ -17,7 +16,7 @@
 }
 
 .side-drawer ul{
-    height: 80%;
+    height: 70%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -30,7 +29,7 @@
 }
 
 .side-drawer a{ 
-    color: #521751;
+    color: white;
     text-decoration: none;
     font-size: 1.3rem;
     align-items: center;
@@ -55,3 +54,9 @@
         
     }
 }
+
+@media (min-width: 800px)  {
+    .side-drawer{
+    display: none;
+    }
+ }

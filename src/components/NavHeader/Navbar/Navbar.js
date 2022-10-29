@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 import './Navbar.css'
 import Logo from '../../../Images/logo.jpeg'
+import { Button } from '@mui/material';
 
 const Navbar = props => (
     <header className="navbar">
@@ -10,7 +11,7 @@ const Navbar = props => (
             <div className="navbar_button">
                 <DrawerToggleButton click={props.drawerClickHandler}/>
             </div>
-            <Router>
+            
             <Link to="/">
             <img className ="logo"
             src={Logo} alt=""
@@ -21,10 +22,9 @@ const Navbar = props => (
                 marginLeft: "5px",
                 fontFamily:"Cursive",
                 fontWeight:"bold",
-                fontSize:"small"
-            }}>Over Landing Across Africa </span>
-            </Router>
-
+                fontSize:"large"
+            }}>OverLanding Across Africa </span>
+            
             <div className="spacer"/>
             <div className="navbar_navigation_items">
                 <ul>
@@ -35,26 +35,23 @@ const Navbar = props => (
                     <li><a href="/gallery">Gallery</a></li>
                     <li><a href="/blog">Blog</a></li>
                     <li><a href="/contact">Contact</a></li>
+                    
                     <li><a href="/bazenga-shop" 
                     style={{
                         color:"orange" , hover:"green" ,
-                        marginLeft: "2rem",
+                        margin: "3rem",
                         fontWeight:"bold",
                         fontFamily:"Cursive, Lucida Handwriting",
-                        textDecoration:"underline"
+                        textDecoration:"underline",
+                        fontSize: "large"
                     }} >Bazenga Online Shop</a></li>
 
-                    {/* <button style={{
-                        backgroundColor:"green",
-                        marginLeft:"4rem",
-                        borderRadius:"10px",
-                        border: ""
-                    }}> Login </button> */}
-
-                    <button className='btn'>Login</button>
+                    <Button variant="contained">Login</Button>
 
                 </ul>
             </div>
+         
+
         </nav>
     </header>
 

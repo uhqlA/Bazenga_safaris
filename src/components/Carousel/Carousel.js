@@ -5,7 +5,8 @@ import Carousel from "react-bootstrap/Carousel";
 import ImageOne from "../../Images/image1.jpg";
 import ImageTwo from "../../Images/image2.jpg";
 import ImageThree from "../../Images/image3.jpg";
-//import ImageFour from "../../Images/image4.jpg";
+import ImageFour from "../../Images/image40.jpg"
+
 
 
 
@@ -23,6 +24,7 @@ function CarouselFade() {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -49,6 +51,19 @@ function CarouselFade() {
           </p>
         </Carousel.Caption>
       </Carousel.Item>
+
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={ImageFour}
+          alt="Bazenga Safaris"
+        />
+        <Carousel.Caption>
+          <h3>Bazenga Safaris</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      
     </Carousel>
   );
 }

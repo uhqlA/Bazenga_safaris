@@ -1,5 +1,6 @@
 import React from "react";
 import "./SideDrawer.css";
+import { Button } from '@mui/material';
 
 const sideDrawer = props =>{
     let drawerClasses = ['side-drawer'];
@@ -19,17 +20,21 @@ const sideDrawer = props =>{
         <li><a href="/contact">Contact</a></li>
         <li className="shop"><a href="/bazenga-shop" 
             style={{
-                color:"blue",
+                color:"orange",
                 fontWeight:"bold",
                 fontFamily:"Cursive",
-                fontSize:'small'
+                textDecoration:"underline",
+                fontSize:'large'
                 }} >Bazenga Online Shop</a></li>
 
-           <li><a href="/login"> 
-            <button style={{
-                        backgroundColor:"green",
-                        borderRadius:"10px"
-                    }}> Login </button>  </a></li>
+          
+           <Button variant="contained"
+           style={{
+            margin:"10px",
+            padding:"4px",
+            width:"50%",
+            marginLeft: "2rem"
+           }}>Login</Button>
 
         </ul>
     </nav>

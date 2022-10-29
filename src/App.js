@@ -1,23 +1,22 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Rendered components
 import Navbar from "./Navbar";
-import Carousel from "../src/components/Carousel/Carousel"
-import SocialMedia from './components/SocialMedia/SocialMedia';
+import Home from "../src/Components/Pages/Home/Home";
+import About from "../src/Components/Pages/About/About";
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Navbar />
-      
-      <Carousel />
-      <SocialMedia />
-    
-       
-       
 
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   )
-}
+};
 
-export default App
+export default App;
